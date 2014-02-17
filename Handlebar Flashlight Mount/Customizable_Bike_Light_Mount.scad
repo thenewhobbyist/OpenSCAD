@@ -1,7 +1,15 @@
-//
 // Customizable Bike Light Mount v1.0
+// TheNewHobbyist 2014 http://thenewhobbyist.com
+// e-mail: chris@thenewhobbyist
+// twitter: @thenewhobbyist
 //
-
+// Description: 
+// This is a design for a bike handlebar mount for flashlights.
+//
+// Usage:
+// 1. Enter the desired number of zip tie routing holes.
+// 2. Enter the diameter of your flashlight and bike handlebars.
+// 
 
 /* [Settings] */
 
