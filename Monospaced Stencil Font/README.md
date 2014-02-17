@@ -1,4 +1,4 @@
-![](https://raw.github.com/thenewhobbyist/OpenSCAD/master/Monospaced%20Stencil%20Font/Monospaced_Sample.jpg)
+![](https://raw.github.com/thenewhobbyist/OpenSCAD/master/Monospaced%20Stencil%20Font/Monospaced_Sample.png)
 
 This is an updated version of jonnyhoeven's Stencil font for write.scad. I had issues with overlapping characters so I went ahead and made some modifications to the spacing, width, and shape of some of the characters. All of the characters should now be pretty well spaced and close to the same size.
 
