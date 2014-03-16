@@ -1,4 +1,4 @@
-// Customizable Wire Access Grommet v1.1
+// Customizable Wire Access Grommet v1.2
 // by TheNewHobbyist 2014 (http://thenewhobbyist.com)
 // http://www.thingiverse.com/thing:273159
 //
@@ -15,6 +15,11 @@
 //
 // Enter text if desired for lid.
 //
+// Change Log:
+// v1.0 CREATED
+// v1.1 ADDED write.scad generated text on lid of grommet
+// v1.2 UPDATED views for Customizer App
+//
 
 
   //////////////////////
@@ -24,15 +29,15 @@
 
 /* [Grommet Settings] */
 
-//Enter the diameter of the hole in table in mm
+//Select the diameter of the hole in table in mm
 Grommet_Diameter = 40; // [20:90]
 
-//Enter the diamter if the access hole in mm
+//Select the diamter if the access hole in mm
 Hole_Diameter = 20; // [5:50]
 
 /* [Text] */
 
-//Optional text for grommet lid
+//Rotate model to see text
 Top_Text = "";
 
 Font_Size = 8; // [5:20]
@@ -50,8 +55,6 @@ build_plate_manual_x = 100; //[100:400]
 
 //when Build Plate Selector is set to "manual" this controls the build plate y dimension
 build_plate_manual_y = 100; //[100:400]
-
-build_plate(build_plate_selector,build_plate_manual_x,build_plate_manual_y);
 	
 /* [Hidden] */
 
@@ -108,9 +111,22 @@ module full_bottom(){
  // Put it all together! //
 //////////////////////////
 
+if (preview_tab == "Text"){
+translate([-Grommet_Diameter*.8,0,0]) full_top();
+translate([Grommet_Diameter*.8,0,0]) full_bottom();	
+}
+
+else if (preview_tab == "Build plate"){
 translate([-Grommet_Diameter*.8,0,0]) full_top();
 translate([Grommet_Diameter*.8,0,0]) full_bottom();
+build_plate(build_plate_selector,build_plate_manual_x,build_plate_manual_y);
+}
 
+else{
+	translate([-Grommet_Diameter*.8,0,0]) full_top();
+	translate([Grommet_Diameter*.8,0,0]) full_bottom();
+	build_plate(build_plate_selector,build_plate_manual_x,build_plate_manual_y);
+}
 
 
 
