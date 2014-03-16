@@ -13,6 +13,7 @@
 // Use the sliders to select your desired diameter (in mm) for the grommet
 // itself and the access hole cut into it.
 //
+// Enter text if desired for lid.
 //
 
 
@@ -28,6 +29,16 @@ Grommet_Diameter = 40; // [20:90]
 
 //Enter the diamter if the access hole in mm
 Hole_Diameter = 20; // [5:50]
+
+/* [Text] */
+
+//Optional text for grommet lid
+Top_Text = "";
+
+Font_Size = 8; // [5:20]
+
+// Default is 8
+Letter_Spacing = 1.3; // [1:Close, 1.3:Normal, 1.6:Far, 2:Very Far]
 
 /* [Build Plate] */
 
@@ -53,6 +64,8 @@ $fn=120;
 /////////////////////////////////
 
  use <utils/build_plate.scad>
+ use <write/Write.scad>
+ 
 
   ////////////////////
  // Moduletown USA //
@@ -71,6 +84,7 @@ module full_top(){
 			translate([0,0,5.25]) cylinder(r=Grommet_Diameter/2-3, h=5, center=true);	
 			translate([Grommet_Diameter*.25,0,0]) cylinder(r=Hole_Diameter/2, h=40, center=true);	
 			translate([Grommet_Diameter*.6,0,0]) cube([Grommet_Diameter*.75, Hole_Diameter, 40], center=true);
+			rotate([180,0,0]) writecylinder(Top_Text,[0,0,0],Grommet_Diameter/1.5,0,space=Letter_Spacing,east=-90,face="top",center=true, h=Font_Size); 
 		}	
 	}
 }
@@ -96,3 +110,8 @@ module full_bottom(){
 
 translate([-Grommet_Diameter*.8,0,0]) full_top();
 translate([Grommet_Diameter*.8,0,0]) full_bottom();
+
+
+
+
+
