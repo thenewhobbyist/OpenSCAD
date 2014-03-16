@@ -1,4 +1,4 @@
-// Customizable Wire Access Grommet v1.0
+// Customizable Wire Access Grommet v1.1
 // by TheNewHobbyist 2014 (http://thenewhobbyist.com)
 // http://www.thingiverse.com/thing:273159
 //
