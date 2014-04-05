@@ -1,4 +1,4 @@
-// Customizable Movie Award Base v1.0
+// Customizable Movie Award Base
 // by TheNewHobbyist 2014 (http://thenewhobbyist.com)
 // http://www.thingiverse.com/thing:244025
 //
@@ -76,8 +76,8 @@ module label() {
 			translate([0,0,0+c1[1]+c2[1]-.1+2]) cylinder(r=c3[0]/2+.1, h=c3[1]-5, center=false);
 			translate([0,0,0+c1[1]+c2[1]-.1+2]) cylinder(r=c3[0]/2-3, h=c3[1]-5, center=false);
 			translate([8,0,0]) cube([50, 100, 100], center=true);
-			writecylinder(Top_Label,[0,0,10],c3[0]/2-0.4,0,east=-90,up=6,center=true); 
-			writecylinder(Bottom_Label,[0,0,10],c3[0]/2-0.4,0,east=-90,up=0,center=true); 
+			writecylinder(Top_Label,[0,0,10],c3[0]/20,east=-90,up=6,t=15,center=true); 
+			writecylinder(Bottom_Label,[0,0,10],c3[0]/20,east=-90,up=0,center=true); 
 	}
 }
 
@@ -104,8 +104,15 @@ if (Printer_Type == "preview") {
 
 else if (Printer_Type == "single") {
 	rotate([0,0,90]) {
+		difference(){
+
+		union(){
 		color("DimGrey") base();
 		color("silver") label();
+		}
+		writecylinder(Top_Label,[0,0,10],c3[0]/2,0,east=-90,up=6,center=true); 
+		writecylinder(Bottom_Label,[0,0,10],c3[0]/2,0,east=-90,up=0,center=true); 
+	}
 	}
 }
 

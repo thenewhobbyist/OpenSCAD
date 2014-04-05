@@ -9,6 +9,10 @@ Using Customizer you can add two lines of custom text to the base of this statue
 
 For those of you also hosting parties, print the included sculpture from cerberus333 (thanks for the excellent award statue sculpt! I'm not sure if I would have started this project if I didn't have access to your awesome sculpture) to stand on top. Or make your own award statue, this could be great re-purposed for birthdays, graduations, fathers day, etc (best maker anyone?).
 
+Change Log:
+v1.0 CREATED
+v1.1 Increased the depth of the lettering cutouts for single extruder prints.
+
 ![](https://raw.github.com/thenewhobbyist/OpenSCAD/master/Customizable%20Movie%20Award%20Base/DSC_4835_copy4_display_large.jpg)
 
 ![](https://raw.github.com/thenewhobbyist/OpenSCAD/master/Customizable%20Movie%20Award%20Base/DSC_4831_copy_display_large.jpg)
