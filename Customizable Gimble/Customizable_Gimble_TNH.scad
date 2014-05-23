@@ -80,6 +80,7 @@ input_height= points_array[0][1];
 sTrace = dispo_width/input_width;
 stencil_height = input_height*sTrace + 2*margin;
 $fn=100;
+// preview[view:south, tilt:top]
 
   ////////////////////
  // Moduletown USA //
@@ -141,12 +142,14 @@ module ring3(){
  // Put it all together //
 /////////////////////////
 
-union(){
-	ring1();
-	ring2();
-	ring3();
-	difference(){
-		pattern();
-		cutout();
+translate([0,0,2.5]){
+	union(){
+		ring1();
+		ring2();
+		ring3();
+		difference(){
+			color("blue") pattern();
+			cutout();
+		}
 	}
 }
