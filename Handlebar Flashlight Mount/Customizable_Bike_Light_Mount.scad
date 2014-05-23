@@ -49,7 +49,7 @@ use <utils/build_plate.scad>
 
 module holder(){
 	difference(){ 
-		cube([bar_thickness+6.8, light_thickness+6.8, box_height],center=true);
+		cube([bar_thickness+10.8, light_thickness+6.8, box_height],center=true);
 		translate([0,0,box_height/2]) rotate([0,90,0]) cylinder(r=light_thickness/2, h=bar_thickness+20, center=true);
 		translate([0,0,-box_height/2]) rotate([90,90,0]) cylinder(r=bar_thickness/2, h=light_thickness+20, center=true);
 	}
