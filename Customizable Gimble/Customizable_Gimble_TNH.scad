@@ -1,7 +1,7 @@
 // Customizable Gimbal v1.0
 // by TheNewHobbyist 2014 (http://thenewhobbyist.com)
-// http://www.thingiverse.com/thing:
-// http://www.github.com/
+// http://www.thingiverse.com/thing:340948
+// https://github.com/thenewhobbyist/OpenSCAD/tree/master/Customizable%20Gimble
 //
 // "Customizable Gimbal" is licensed under a 
 // Creative Commons Attribution-NonCommercial 3.0 Unported License.
